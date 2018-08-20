@@ -33,10 +33,13 @@ ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy), color="blue")
 # -- continuous: hwy, cty, cyl, year, displ
 # 3. Map a continuous variable to color, size and shape. How do these aesthetics behave differently 
 # for categorical vs continuous?
-ggplot(data = mpg) + geom_point(mapping = aes(x = cty, y = cyl), color = "purple")
-ggplot(data = mpg) + geom_point(mapping = aes(x = cty, y = cyl), size=class)
-ggplot(data = mpg) + geom_point(mapping = aes(x = cyl, y = cty), shape=class)
+ggplot(mpg, aes(x = displ, y = hwy, colour = cty)) + geom_point()
+ggplot(mpg, aes(x = displ, y = hwy, size = cty)) + geom_point()
+# --continuous variable cannot be mapped to a shape
 # 4. What happens if you map the same variable to multiple aesthetics?
+ggplot(mpg, aes(x = displ, y = hwy, colour = hwy, size = displ)) +
+  geom_point()
 # 5. What does the stroke aesthetic do? What shapes does it work with?
-
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point(shape = 21, colour = "black", fill = "white", size = 5, stroke = 5)
 
