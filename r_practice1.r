@@ -42,4 +42,40 @@ ggplot(mpg, aes(x = displ, y = hwy, colour = hwy, size = displ)) +
 # 5. What does the stroke aesthetic do? What shapes does it work with?
 ggplot(mtcars, aes(wt, mpg)) +
   geom_point(shape = 21, colour = "black", fill = "white", size = 5, stroke = 5)
+  ?geom_point
+  vignette("ggplot2-specs")
 
+  
+# FACETS : one way to add additional variables is with aesthetics. Another technique,
+# useful for categorical variables, is to split your plot into 
+# facets - subplots that each display one subset of the data. 
+  
+### To facet your plot by a single variable, use facet_wrap()
+  # -- the first argument should be a formula, created with ~ followed by a variable name
+  #    (of a data structure in R)
+  # -- the variable that you pass should be discrete 
+ggplot(data=mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_wrap(~ class, nrow=2)
+
+### To facet your plot on the combination of two variable, add facet_grid()
+  # -- the first argument is also a formula, containing two variables separated by a ~
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy )) +
+  facet_grid(drv ~ cyl)
+
+
+# EXERCISES:
+# I. What happens in you facet on a continuous variable? 
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point() +
+  facet_grid(. ~ cty)
+# -- it converts the continuous variable to a factor and creates facets for all,
+# unique values of it.
+# II. What do the empty cells in a plot with face_grid(drv ~ cyl) mean?
+# -- they are the cells in which there are no values of the combination of drv and cyl 
+# How do they relate to this plot? 
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = drv, y =cyl))
+# The locations in the above plot without points are the same cells 
+# in facet_grid(drv ~ cyl) that have no points.
