@@ -79,3 +79,46 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = drv, y =cyl))
 # The locations in the above plot without points are the same cells 
 # in facet_grid(drv ~ cyl) that have no points.
+# III. What plots does the following code make? What does . do?
+# The symbol . ignores that dimension for faceting. This plot facets by values
+# of drv on the y-axis:
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)
+# This plot facets by values of cyl on the x-axis:
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(. ~ cyl)
+# IV. Take the first faceted plot in this section:
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_wrap(~ class, nrow = 2)
+#What are the advantages to using faceting instead of the colour
+# aesthetic? What are the disadvantages? How might the balance 
+# change if you had a larger dataset?
+# This is what the plot looks like when class is represented by
+# the colour the color aesthetic instead of faceting.
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+# Advantages of encoding class with facets instead of color include the ability 
+# to encode more distinct categories. Given human visual perception, the max number of colors
+# to use when encoding unordered categorical(qualitative) data is nine, and in practice,
+# often much less than that. When placing points in different categories in different scales,
+# makes it difficult to directly compare values of individual points in different 
+# categories, it can make it easier to compare pattern b/w categories. 
+
+# Disadvantages of encoding class w/ facets instead of color are that different w/
+# different class is that the points for each category are on different plots, making
+# it more difficult to directly compare the locations of individual points. Using the same
+# x- and y- scales for all facets lessens this disadvantage. Since encoding class within color
+# also places all points on the same plot, it visualizes the unconditional relationship b/w
+# the x and y variables; with facets. the unconditional relationship is no longer visualized 
+# since the points are spread across multiple plots.
+
+# The benefits encoding a variable through facetting over color become more advantageous
+# as either # of points or the # of categories increase. In the former, as the # of points increase,
+# there is likely to be more overlap. 
+
+# It is difficult to handle overlapping points with color. Jittering will work with color,
+# but jittering will only work well if there are few points and the classes do not overlap much.
+# Otherwise the colors of areas will no longer be distinct and 
