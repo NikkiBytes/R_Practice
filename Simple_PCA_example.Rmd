@@ -1,0 +1,41 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+A Simple PCA
+
+In this example, we will try a PCA using a simple and easy to understand dataset. You will use the mtcars dataset, which is built into R. This dataset consists of data on 32 models of car, taken from an American motoring magazine (1974 Motor Trend magazine). For each car, you have 11 features, expressed in varying units (US units), They are as follows:
+
+```{r}
+mtcars
+mtcars_refined <- mtcars[,c(1:7,10,11)]
+mtcars_refined
+
+```
+
+```{r}
+mtcars.pca <- prcomp(mtcars[,c(1:7,10,11)], center = TRUE,scale. = TRUE)
+mtcars.pca
+summary(mtcars.pca)
+
+```
+
+
+You obtain 9 principal components, which you call PC1-9. Each of these explains a percentage of the total variation in the dataset. That is to say: PC1 explains 63% of the total variance, which means that nearly two-thirds of the information in the dataset (9 variables) can be encapsulated by just that one Principal Component. PC2 explains 23% of the variance. So, by knowing the position of a sample in relation to just PC1 and PC2, you can get a very accurate view on where it stands in relation to other samples, as just PC1 and PC2 can explain 86% of the variance.
+
+
+
+Let's call str() to have a look at your PCA object.
+
+```{r}
+str(mtcars.pca)
+```
+
+Install next 
+```{r}
+library(ggbiplot)
+
+ggbiplot(mtcars.pca)
+```
+
