@@ -1,0 +1,38 @@
+---
+title: "Building Shiny App"
+output: html_notebook
+---
+
+There are several ways to create a Shiny app. The simplest is to create a new directory for your app, and put a single file called app.R in it. This app.R file will be used to tell Shiny both how your app should look, and how it should behave.
+ 
+
+```{r}
+library(shiny)
+ui <- fluidPage(
+  "Hello, world!"
+)
+server <- function(input, output, session) {
+}
+shinyApp(ui, server)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+## Adding UI Controls
+
+Using built-in data frames in the dataset package.
+
+```{r}
+ui <- fluidPage(
+  selectInput("dataset", label = "Dataset", choices = ls("package:datasets")),
+  verbatimTextOutput("summary"),
+  tableOutput("table")
+)
+```
+
+- fluidPage() is a **layout function**, it sets up the basic visual structure of the page.  
+- selectInput() is an **input control**, it allows users to interact with the app by providing a value.   
+- verbatimTextOutput() and tableOutput() are **output controls**, they tell the app where to put rendered output. Specifically, verbatimTextOutput() displays code and tableOutput() displays tables. 
+
