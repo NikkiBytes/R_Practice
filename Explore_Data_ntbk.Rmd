@@ -33,3 +33,13 @@ library(skimr)
 skim(PlantGrowth)
 
 ```
+
+
+**create_report** 
+
+```{r}
+#install.packages("DataExplorer")
+library(DataExplorer)
+
+DataExplorer::create_report(PlantGrowth)
+```

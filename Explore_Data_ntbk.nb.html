@@ -238,41 +238,227 @@ summary(PlantGrowth)
 <p><strong>Skim:</strong> good addition to the summary function. Displaying - most the numerical attributes from summary, - it also displays missing values, - more quantile information, - and an inine histogram for each variable.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2tpbShQbGFudEdyb3d0aClcblxuYGBgIn0= -->
-<pre class="r"><code>skim(PlantGrowth)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2luc3RhbGwucGFja2FnZXMoXCJza2ltclwiKVxubGlicmFyeShza2ltcilcbnNraW0oUGxhbnRHcm93dGgpXG5cbmBgYCJ9 -->
+<pre class="r"><code>#install.packages(&quot;skimr&quot;)
+library(skimr)
+skim(PlantGrowth)
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiLS0gRGF0YSBTdW1tYXJ5IC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgVmFsdWVzICAgICBcbk5hbWUgICAgICAgICAgICAgICAgICAgICAgIFBsYW50R3Jvd3RoXG5OdW1iZXIgb2Ygcm93cyAgICAgICAgICAgICAzMCAgICAgICAgIFxuTnVtYmVyIG9mIGNvbHVtbnMgICAgICAgICAgMiAgICAgICAgICBcbl9fX19fX19fX19fX19fX19fX19fX19fICAgICAgICAgICAgICAgXG5Db2x1bW4gdHlwZSBmcmVxdWVuY3k6ICAgICAgICAgICAgICAgIFxuICBmYWN0b3IgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICBcbiAgbnVtZXJpYyAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgXG5fX19fX19fX19fX19fX19fX19fX19fX18gICAgICAgICAgICAgIFxuR3JvdXAgdmFyaWFibGVzICAgICAgICAgICAgTm9uZSAgICAgICBcblxuLS0gVmFyaWFibGUgdHlwZTogZmFjdG9yIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuIyBBIHRpYmJsZTogMSB4IDZcbiAgc2tpbV92YXJpYWJsZSBuX21pc3NpbmcgY29tcGxldGVfcmF0ZSBvcmRlcmVkIG5fdW5pcXVlIHRvcF9jb3VudHMgICAgICAgICAgICAgICBcbiogPGNocj4gICAgICAgICAgICAgPGludD4gICAgICAgICA8ZGJsPiA8bGdsPiAgICAgIDxpbnQ+IDxjaHI+ICAgICAgICAgICAgICAgICAgICBcbjEgZ3JvdXAgICAgICAgICAgICAgICAgIDAgICAgICAgICAgICAgMSBGQUxTRSAgICAgICAgICAzIGN0cjogMTAsIHRydDogMTAsIHRydDogMTBcblxuLS0gVmFyaWFibGUgdHlwZTogbnVtZXJpYyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuIyBBIHRpYmJsZTogMSB4IDExXG4gIHNraW1fdmFyaWFibGUgbl9taXNzaW5nIGNvbXBsZXRlX3JhdGUgIG1lYW4gICAgc2QgICAgcDAgICBwMjUgICBwNTAgICBwNzUgIHAxMDBcbiogPGNocj4gICAgICAgICAgICAgPGludD4gICAgICAgICA8ZGJsPiA8ZGJsPiA8ZGJsPiA8ZGJsPiA8ZGJsPiA8ZGJsPiA8ZGJsPiA8ZGJsPlxuMSB3ZWlnaHQgICAgICAgICAgICAgICAgMCAgICAgICAgICAgICAxICA1LjA3IDAuNzAxICAzLjU5ICA0LjU1ICA1LjE1ICA1LjUzICA2LjMxXG4gIGhpc3QgXG4qIDxjaHI+XG4xIOKWguKWh+KWh+KWh+KWhlxuIn0= -->
-<pre><code>-- Data Summary ------------------------
-                           Values     
-Name                       PlantGrowth
-Number of rows             30         
-Number of columns          2          
-_______________________               
-Column type frequency:                
-  factor                   1          
-  numeric                  1          
-________________________              
-Group variables            None       
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><strong>create_report</strong></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuRGF0YUV4cGxvcmVyOjpjcmVhdGVfcmVwb3J0KFBsYW50R3Jvd3RoKVxuXG5gYGAifQ== -->
+<pre class="r"><code>DataExplorer::create_report(PlantGrowth)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5cbnByb2Nlc3NpbmcgZmlsZTogcmVwb3J0LnJtZFxuIn0= -->
+<pre><code>
 
--- Variable type: factor ---------------------------------------------------------
-# A tibble: 1 x 6
-  skim_variable n_missing complete_rate ordered n_unique top_counts               
-* &lt;chr&gt;             &lt;int&gt;         &lt;dbl&gt; &lt;lgl&gt;      &lt;int&gt; &lt;chr&gt;                    
-1 group                 0             1 FALSE          3 ctr: 10, trt: 10, trt: 10
+processing file: report.rmd</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgICAwJVxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB8ICAgMiVcbiAgIGlubGluZSBSIGNvZGUgZnJhZ21lbnRzXG5cblxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLi4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB8ICAgNSVcbmxhYmVsOiBnbG9iYWxfb3B0aW9ucyAod2l0aCBvcHRpb25zKSBcbkxpc3Qgb2YgMVxuICQgaW5jbHVkZTogbG9naSBGQUxTRVxuXG5cbiAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICB8Li4uLi4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfCAgIDclXG4gIG9yZGluYXJ5IHRleHQgd2l0aG91dCBSIGNvZGVcblxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgIDEwJVxubGFiZWw6IGludHJvZHVjZVxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgIDEyJVxuICBvcmRpbmFyeSB0ZXh0IHdpdGhvdXQgUiBjb2RlXG5cblxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB8ICAxNCVcbmxhYmVsOiBwbG90X2ludHJvXG5cbiAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICB8Li4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfCAgMTclXG4gIG9yZGluYXJ5IHRleHQgd2l0aG91dCBSIGNvZGVcblxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgIDE5JVxubGFiZWw6IGRhdGFfc3RydWN0dXJlXG5cbiAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICB8Li4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfCAgMjElXG4gIG9yZGluYXJ5IHRleHQgd2l0aG91dCBSIGNvZGVcblxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgIDI0JVxubGFiZWw6IG1pc3NpbmdfcHJvZmlsZVxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uLi4uLi4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgIDI2JVxuICBvcmRpbmFyeSB0ZXh0IHdpdGhvdXQgUiBjb2RlXG5cblxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLi4uLi4uLi4uLi4uLi4uLi4uLi4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB8ICAyOSVcbmxhYmVsOiB1bml2YXJpYXRlX2Rpc3RyaWJ1dGlvbl9oZWFkZXJcblxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB8ICAzMSVcbiAgb3JkaW5hcnkgdGV4dCB3aXRob3V0IFIgY29kZVxuXG5cbiAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICB8Li4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfCAgMzMlXG5sYWJlbDogcGxvdF9oaXN0b2dyYW1cblxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB8ICAzNiVcbiAgb3JkaW5hcnkgdGV4dCB3aXRob3V0IFIgY29kZVxuXG5cbiAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICB8Li4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfCAgMzglXG5sYWJlbDogcGxvdF9kZW5zaXR5XG5cbiAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICB8Li4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfCAgNDAlXG4gIG9yZGluYXJ5IHRleHQgd2l0aG91dCBSIGNvZGVcblxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgIDQzJVxubGFiZWw6IHBsb3RfZnJlcXVlbmN5X2JhclxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgIDQ1JVxuICBvcmRpbmFyeSB0ZXh0IHdpdGhvdXQgUiBjb2RlXG5cblxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB8ICA0OCVcbmxhYmVsOiBwbG90X3Jlc3BvbnNlX2JhclxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgIDUwJVxuICBvcmRpbmFyeSB0ZXh0IHdpdGhvdXQgUiBjb2RlXG5cblxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB8ICA1MiVcbmxhYmVsOiBwbG90X3dpdGhfYmFyXG5cbiAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICB8Li4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfCAgNTUlXG4gIG9yZGluYXJ5IHRleHQgd2l0aG91dCBSIGNvZGVcblxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgIDU3JVxubGFiZWw6IHBsb3Rfbm9ybWFsX3FxXG5cbiAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICB8Li4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfCAgNjAlXG4gIG9yZGluYXJ5IHRleHQgd2l0aG91dCBSIGNvZGVcblxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLiAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgIDYyJVxubGFiZWw6IHBsb3RfcmVzcG9uc2VfcXFcblxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgICAgICB8ICA2NCVcbiAgb3JkaW5hcnkgdGV4dCB3aXRob3V0IFIgY29kZVxuXG5cbiAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICB8Li4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgICAgfCAgNjclXG5sYWJlbDogcGxvdF9ieV9xcVxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgICAgIHwgIDY5JVxuICBvcmRpbmFyeSB0ZXh0IHdpdGhvdXQgUiBjb2RlXG5cblxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4gICAgICAgICAgICAgICAgICAgICB8ICA3MSVcbmxhYmVsOiBjb3JyZWxhdGlvbl9hbmFseXNpc1xuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICAgIHwgIDc0JVxuICBvcmRpbmFyeSB0ZXh0IHdpdGhvdXQgUiBjb2RlXG5cblxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgICB8ICA3NiVcbmxhYmVsOiBwcmluY2lwYWxfY29tcG9uZW50X2FuYWx5c2lzXG5cbiAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICB8Li4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgICAgfCAgNzklXG4gIG9yZGluYXJ5IHRleHQgd2l0aG91dCBSIGNvZGVcblxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4gICAgICAgICAgICAgIHwgIDgxJVxubGFiZWw6IGJpdmFyaWF0ZV9kaXN0cmlidXRpb25faGVhZGVyXG5cbiAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICB8Li4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgICAgfCAgODMlXG4gIG9yZGluYXJ5IHRleHQgd2l0aG91dCBSIGNvZGVcblxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICAgICAgIHwgIDg2JVxubGFiZWw6IHBsb3RfcmVzcG9uc2VfYm94cGxvdFxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLiAgICAgICAgIHwgIDg4JVxuICBvcmRpbmFyeSB0ZXh0IHdpdGhvdXQgUiBjb2RlXG5cblxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLiAgICAgICB8ICA5MCVcbmxhYmVsOiBwbG90X2J5X2JveHBsb3RcblxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgICB8ICA5MyVcbiAgb3JkaW5hcnkgdGV4dCB3aXRob3V0IFIgY29kZVxuXG5cbiAgfCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICB8Li4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uICAgfCAgOTUlXG5sYWJlbDogcGxvdF9yZXNwb25zZV9zY2F0dGVycGxvdFxuXG4gIHwgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgfC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4gIHwgIDk4JVxuICBvcmRpbmFyeSB0ZXh0IHdpdGhvdXQgUiBjb2RlXG5cblxuICB8ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gIHwuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi58IDEwMCVcbmxhYmVsOiBwbG90X2J5X3NjYXR0ZXJwbG90XG5cblwiQzovVXNlcnMvMTk4MDIvQU5BQ09OfjEvZW52cy9yc3R1ZGlvL1NjcmlwdHMvcGFuZG9jXCIgK1JUUyAtSzUxMm0gLVJUUyBcIkM6L1VzZXJzLzE5ODAyL0RvY3VtZW50cy9kZXYvUl9QcmFjdGljZS9yZXBvcnQua25pdC5tZFwiIC0tdG8gaHRtbDQgLS1mcm9tIG1hcmtkb3duK2F1dG9saW5rX2JhcmVfdXJpcyt0ZXhfbWF0aF9zaW5nbGVfYmFja3NsYXNoIC0tb3V0cHV0IHBhbmRvYzEyMTg0MmFkNTUxYy5odG1sIC0tbHVhLWZpbHRlciBcIkM6XFxVc2Vyc1xcMTk4MDJcXGFuYWNvbmRhM1xcZW52c1xccnN0dWRpb1xcbGliXFxSXFxsaWJyYXJ5XFxybWFya2Rvd25cXHJtYXJrZG93blxcbHVhXFxwYWdlYnJlYWsubHVhXCIgLS1sdWEtZmlsdGVyIFwiQzpcXFVzZXJzXFwxOTgwMlxcYW5hY29uZGEzXFxlbnZzXFxyc3R1ZGlvXFxsaWJcXFJcXGxpYnJhcnlcXHJtYXJrZG93blxccm1hcmtkb3duXFxsdWFcXGxhdGV4LWRpdi5sdWFcIiAtLXNlbGYtY29udGFpbmVkIC0tdmFyaWFibGUgYnMzPVRSVUUgLS1zdGFuZGFsb25lIC0tc2VjdGlvbi1kaXZzIC0tdGFibGUtb2YtY29udGVudHMgLS10b2MtZGVwdGggNiAtLXRlbXBsYXRlIFwiQzpcXFVzZXJzXFwxOTgwMlxcYW5hY29uZGEzXFxlbnZzXFxyc3R1ZGlvXFxsaWJcXFJcXGxpYnJhcnlcXHJtYXJrZG93blxccm1kXFxoXFxkZWZhdWx0Lmh0bWxcIiAtLW5vLWhpZ2hsaWdodCAtLXZhcmlhYmxlIGhpZ2hsaWdodGpzPTEgLS12YXJpYWJsZSB0aGVtZT15ZXRpIC0taW5jbHVkZS1pbi1oZWFkZXIgXCJDOlxcVXNlcnNcXDE5ODAyXFxBcHBEYXRhXFxMb2NhbFxcVGVtcFxcUnRtcGdodVlLWFxccm1hcmtkb3duLXN0cjEyMTgxNDc0NWM1OS5odG1sXCIgLS1tYXRoamF4IC0tdmFyaWFibGUgXCJtYXRoamF4LXVybDpodHRwczovL21hdGhqYXgucnN0dWRpby5jb20vbGF0ZXN0L01hdGhKYXguanM/Y29uZmlnPVRlWC1BTVMtTU1MX0hUTUxvck1NTFwiIFxuIn0= -->
+<pre><code>
+  |                                                                              
+  |                                                                        |   0%
+  |                                                                              
+  |..                                                                      |   2%
+   inline R code fragments
 
--- Variable type: numeric --------------------------------------------------------
-# A tibble: 1 x 11
-  skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100
-* &lt;chr&gt;             &lt;int&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1 weight                0             1  5.07 0.701  3.59  4.55  5.15  5.53  6.31
-  hist 
-* &lt;chr&gt;
-1 ▂▇▇▇▆</code></pre>
+
+  |                                                                              
+  |...                                                                     |   5%
+label: global_options (with options) 
+List of 1
+ $ include: logi FALSE
+
+
+  |                                                                              
+  |.....                                                                   |   7%
+  ordinary text without R code
+
+
+  |                                                                              
+  |.......                                                                 |  10%
+label: introduce
+
+  |                                                                              
+  |.........                                                               |  12%
+  ordinary text without R code
+
+
+  |                                                                              
+  |..........                                                              |  14%
+label: plot_intro
+
+  |                                                                              
+  |............                                                            |  17%
+  ordinary text without R code
+
+
+  |                                                                              
+  |..............                                                          |  19%
+label: data_structure
+
+  |                                                                              
+  |...............                                                         |  21%
+  ordinary text without R code
+
+
+  |                                                                              
+  |.................                                                       |  24%
+label: missing_profile
+
+  |                                                                              
+  |...................                                                     |  26%
+  ordinary text without R code
+
+
+  |                                                                              
+  |.....................                                                   |  29%
+label: univariate_distribution_header
+
+  |                                                                              
+  |......................                                                  |  31%
+  ordinary text without R code
+
+
+  |                                                                              
+  |........................                                                |  33%
+label: plot_histogram
+
+  |                                                                              
+  |..........................                                              |  36%
+  ordinary text without R code
+
+
+  |                                                                              
+  |...........................                                             |  38%
+label: plot_density
+
+  |                                                                              
+  |.............................                                           |  40%
+  ordinary text without R code
+
+
+  |                                                                              
+  |...............................                                         |  43%
+label: plot_frequency_bar
+
+  |                                                                              
+  |.................................                                       |  45%
+  ordinary text without R code
+
+
+  |                                                                              
+  |..................................                                      |  48%
+label: plot_response_bar
+
+  |                                                                              
+  |....................................                                    |  50%
+  ordinary text without R code
+
+
+  |                                                                              
+  |......................................                                  |  52%
+label: plot_with_bar
+
+  |                                                                              
+  |.......................................                                 |  55%
+  ordinary text without R code
+
+
+  |                                                                              
+  |.........................................                               |  57%
+label: plot_normal_qq
+
+  |                                                                              
+  |...........................................                             |  60%
+  ordinary text without R code
+
+
+  |                                                                              
+  |.............................................                           |  62%
+label: plot_response_qq
+
+  |                                                                              
+  |..............................................                          |  64%
+  ordinary text without R code
+
+
+  |                                                                              
+  |................................................                        |  67%
+label: plot_by_qq
+
+  |                                                                              
+  |..................................................                      |  69%
+  ordinary text without R code
+
+
+  |                                                                              
+  |...................................................                     |  71%
+label: correlation_analysis
+
+  |                                                                              
+  |.....................................................                   |  74%
+  ordinary text without R code
+
+
+  |                                                                              
+  |.......................................................                 |  76%
+label: principal_component_analysis
+
+  |                                                                              
+  |.........................................................               |  79%
+  ordinary text without R code
+
+
+  |                                                                              
+  |..........................................................              |  81%
+label: bivariate_distribution_header
+
+  |                                                                              
+  |............................................................            |  83%
+  ordinary text without R code
+
+
+  |                                                                              
+  |..............................................................          |  86%
+label: plot_response_boxplot
+
+  |                                                                              
+  |...............................................................         |  88%
+  ordinary text without R code
+
+
+  |                                                                              
+  |.................................................................       |  90%
+label: plot_by_boxplot
+
+  |                                                                              
+  |...................................................................     |  93%
+  ordinary text without R code
+
+
+  |                                                                              
+  |.....................................................................   |  95%
+label: plot_response_scatterplot
+
+  |                                                                              
+  |......................................................................  |  98%
+  ordinary text without R code
+
+
+  |                                                                              
+  |........................................................................| 100%
+label: plot_by_scatterplot
+
+&quot;C:/Users/19802/ANACON~1/envs/rstudio/Scripts/pandoc&quot; +RTS -K512m -RTS &quot;C:/Users/19802/Documents/dev/R_Practice/report.knit.md&quot; --to html4 --from markdown+autolink_bare_uris+tex_math_single_backslash --output pandoc121842ad551c.html --lua-filter &quot;C:\Users\19802\anaconda3\envs\rstudio\lib\R\library\rmarkdown\rmarkdown\lua\pagebreak.lua&quot; --lua-filter &quot;C:\Users\19802\anaconda3\envs\rstudio\lib\R\library\rmarkdown\rmarkdown\lua\latex-div.lua&quot; --self-contained --variable bs3=TRUE --standalone --section-divs --table-of-contents --toc-depth 6 --template &quot;C:\Users\19802\anaconda3\envs\rstudio\lib\R\library\rmarkdown\rmd\h\default.html&quot; --no-highlight --variable highlightjs=1 --variable theme=yeti --include-in-header &quot;C:\Users\19802\AppData\Local\Temp\RtmpghuYKX\rmarkdown-str121814745c59.html&quot; --mathjax --variable &quot;mathjax-url:https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot; </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCmBgYHtyfQ0KDQpteWRhdGE8LWhlYWQoUGxhbnRHcm93dGgpDQpzYXBwbHkoUGxhbnRHcm93dGgsIG1lYW4sIG5hLnJtPVRSVUUpDQoNCg0KaGVhZChQbGFudEdyb3d0aCkNCg0KZGltKFBsYW50R3Jvd3RoKQ0KDQpsaWJyYXJ5KGRwbHlyKQ0KZ2xpbXBzZShQbGFudEdyb3d0aCkNCg0Kc3VtbWFyeShQbGFudEdyb3d0aCkNCg0KYGBgDQoNCioqU2tpbToqKiBnb29kIGFkZGl0aW9uIHRvIHRoZSBzdW1tYXJ5IGZ1bmN0aW9uLiBEaXNwbGF5aW5nIA0KLSBtb3N0IHRoZSBudW1lcmljYWwgYXR0cmlidXRlcyBmcm9tIHN1bW1hcnksIA0KLSBpdCBhbHNvIGRpc3BsYXlzIG1pc3NpbmcgdmFsdWVzLA0KLSBtb3JlIHF1YW50aWxlIGluZm9ybWF0aW9uLA0KLSBhbmQgYW4gaW5pbmUgaGlzdG9ncmFtIGZvciBlYWNoIHZhcmlhYmxlLiANCg0KYGBge3J9DQojaW5zdGFsbC5wYWNrYWdlcygic2tpbXIiKQ0KbGlicmFyeShza2ltcikNCnNraW0oUGxhbnRHcm93dGgpDQoNCmBgYA==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCmBgYHtyfQ0KDQpteWRhdGE8LWhlYWQoUGxhbnRHcm93dGgpDQpzYXBwbHkoUGxhbnRHcm93dGgsIG1lYW4sIG5hLnJtPVRSVUUpDQoNCg0KaGVhZChQbGFudEdyb3d0aCkNCg0KZGltKFBsYW50R3Jvd3RoKQ0KDQpsaWJyYXJ5KGRwbHlyKQ0KZ2xpbXBzZShQbGFudEdyb3d0aCkNCg0Kc3VtbWFyeShQbGFudEdyb3d0aCkNCg0KYGBgDQoNCioqU2tpbToqKiBnb29kIGFkZGl0aW9uIHRvIHRoZSBzdW1tYXJ5IGZ1bmN0aW9uLiBEaXNwbGF5aW5nIA0KLSBtb3N0IHRoZSBudW1lcmljYWwgYXR0cmlidXRlcyBmcm9tIHN1bW1hcnksIA0KLSBpdCBhbHNvIGRpc3BsYXlzIG1pc3NpbmcgdmFsdWVzLA0KLSBtb3JlIHF1YW50aWxlIGluZm9ybWF0aW9uLA0KLSBhbmQgYW4gaW5pbmUgaGlzdG9ncmFtIGZvciBlYWNoIHZhcmlhYmxlLiANCg0KYGBge3J9DQojaW5zdGFsbC5wYWNrYWdlcygic2tpbXIiKQ0KbGlicmFyeShza2ltcikNCnNraW0oUGxhbnRHcm93dGgpDQoNCmBgYA0KDQoNCioqY3JlYXRlX3JlcG9ydCoqIA0KDQpgYGB7cn0NCiNpbnN0YWxsLnBhY2thZ2VzKCJEYXRhRXhwbG9yZXIiKQ0KbGlicmFyeShEYXRhRXhwbG9yZXIpDQoNCkRhdGFFeHBsb3Jlcjo6Y3JlYXRlX3JlcG9ydChQbGFudEdyb3d0aCkNCmBgYA==</div>
 
 
 
