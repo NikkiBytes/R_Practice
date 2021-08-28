@@ -1,11 +1,13 @@
 
 mydata<-head(PlantGrowth)
 sapply(PlantGrowth, mean, na.rm=TRUE)
-mydata
+
+
+head(PlantGrowth)
 
 dim(PlantGrowth)
 
 library(dplyr)
-glimpse
+glimpse(PlantGrowth)
 
 summary(PlantGrowth)

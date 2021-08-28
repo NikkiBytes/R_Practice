@@ -1,0 +1,35 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+
+mydata<-head(PlantGrowth)
+sapply(PlantGrowth, mean, na.rm=TRUE)
+
+
+head(PlantGrowth)
+
+dim(PlantGrowth)
+
+library(dplyr)
+glimpse(PlantGrowth)
+
+summary(PlantGrowth)
+
+```
+
+**Skim:** good addition to the summary function. Displaying 
+- most the numerical attributes from summary, 
+- it also displays missing values,
+- more quantile information,
+- and an inine histogram for each variable. 
+
+```{r}
+#install.packages("skimr")
+library(skimr)
+skim(PlantGrowth)
+
+```
