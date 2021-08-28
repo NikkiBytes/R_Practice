@@ -43,3 +43,23 @@ library(DataExplorer)
 
 DataExplorer::create_report(PlantGrowth)
 ```
+
+## Examine a Data Frame in R 
+
+dim(): shows dimensions of data frames by row and column  
+str(): shows the structure of the data frame  
+head(): shows the first 6 rows of the data frame  
+tail(): shows the first 6 rows of the data frame  
+summary(): provides summary statistics on the columns of the data frames  
+colnames(): shows the name of each column in the data frame  
+View(): shows a spreadsheet-like display of the entire data frame
+
+```{r}
+dim(PlantGrowth)
+str(PlantGrowth)
+head(PlantGrowth)
+tail(PlantGrowth)
+summary(PlantGrowth)
+colnames(PlantGrowth)
+View(PlantGrowth)
+```
