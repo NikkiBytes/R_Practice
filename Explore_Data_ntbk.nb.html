@@ -215,35 +215,61 @@ pre code {
 
 
 <!-- rnb-text-begin -->
+<p>Load Packages</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5teWRhdGE8LWhlYWQoUGxhbnRHcm93dGgpXG5zYXBwbHkoUGxhbnRHcm93dGgsIG1lYW4sIG5hLnJtPVRSVUUpXG5cblxuaGVhZChQbGFudEdyb3d0aClcblxuZGltKFBsYW50R3Jvd3RoKVxuXG5saWJyYXJ5KGRwbHlyKVxuZ2xpbXBzZShQbGFudEdyb3d0aClcblxuc3VtbWFyeShQbGFudEdyb3d0aClcblxuYGBgIn0= -->
-<pre class="r"><code>
-mydata&lt;-head(PlantGrowth)
-sapply(PlantGrowth, mean, na.rm=TRUE)
-
-
-head(PlantGrowth)
-
-dim(PlantGrowth)
-
-library(dplyr)
-glimpse(PlantGrowth)
-
-summary(PlantGrowth)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShnZ3Bsb3QyKVxuXG5gYGAifQ== -->
+<pre class="r"><code>library(ggplot2)
 </code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUlN0dWRpbyBDb21tdW5pdHkgaXMgYSBncmVhdCBwbGFjZSB0byBnZXQgaGVscDpcbmh0dHBzOi8vY29tbXVuaXR5LnJzdHVkaW8uY29tL2MvdGlkeXZlcnNlXG4ifQ== -->
+<pre><code>RStudio Community is a great place to get help:
+https://community.rstudio.com/c/tidyverse</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><strong>Skim:</strong> good addition to the summary function. Displaying - most the numerical attributes from summary, - it also displays missing values, - more quantile information, - and an inine histogram for each variable.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2luc3RhbGwucGFja2FnZXMoXCJza2ltclwiKVxubGlicmFyeShza2ltcilcbnNraW0oUGxhbnRHcm93dGgpXG5cbmBgYCJ9 -->
-<pre class="r"><code>#install.packages(&quot;skimr&quot;)
-library(skimr)
-skim(PlantGrowth)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2tpbShQbGFudEdyb3d0aClcblxuYGBgIn0= -->
+<pre class="r"><code>skim(PlantGrowth)
 </code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiLS0gRGF0YSBTdW1tYXJ5IC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgVmFsdWVzICAgICBcbk5hbWUgICAgICAgICAgICAgICAgICAgICAgIFBsYW50R3Jvd3RoXG5OdW1iZXIgb2Ygcm93cyAgICAgICAgICAgICAzMCAgICAgICAgIFxuTnVtYmVyIG9mIGNvbHVtbnMgICAgICAgICAgMiAgICAgICAgICBcbl9fX19fX19fX19fX19fX19fX19fX19fICAgICAgICAgICAgICAgXG5Db2x1bW4gdHlwZSBmcmVxdWVuY3k6ICAgICAgICAgICAgICAgIFxuICBmYWN0b3IgICAgICAgICAgICAgICAgICAgMSAgICAgICAgICBcbiAgbnVtZXJpYyAgICAgICAgICAgICAgICAgIDEgICAgICAgICAgXG5fX19fX19fX19fX19fX19fX19fX19fX18gICAgICAgICAgICAgIFxuR3JvdXAgdmFyaWFibGVzICAgICAgICAgICAgTm9uZSAgICAgICBcblxuLS0gVmFyaWFibGUgdHlwZTogZmFjdG9yIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiMgQSB0aWJibGU6IDEgeCA2XG4gIHNraW1fdmFyaWFibGUgbl9taXNzaW5nIGNvbXBsZXRlX3JhdGUgb3JkZXJlZCBuX3VuaXF1ZVxuKiA8Y2hyPiAgICAgICAgICAgICA8aW50PiAgICAgICAgIDxkYmw+IDxsZ2w+ICAgICAgPGludD5cbjEgZ3JvdXAgICAgICAgICAgICAgICAgIDAgICAgICAgICAgICAgMSBGQUxTRSAgICAgICAgICAzXG4gIHRvcF9jb3VudHMgICAgICAgICAgICAgICBcbiogPGNocj4gICAgICAgICAgICAgICAgICAgIFxuMSBjdHI6IDEwLCB0cnQ6IDEwLCB0cnQ6IDEwXG5cbi0tIFZhcmlhYmxlIHR5cGU6IG51bWVyaWMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4jIEEgdGliYmxlOiAxIHggMTFcbiAgc2tpbV92YXJpYWJsZSBuX21pc3NpbmcgY29tcGxldGVfcmF0ZSAgbWVhbiAgICBzZCAgICBwMCAgIHAyNSAgIHA1MCAgIHA3NVxuKiA8Y2hyPiAgICAgICAgICAgICA8aW50PiAgICAgICAgIDxkYmw+IDxkYmw+IDxkYmw+IDxkYmw+IDxkYmw+IDxkYmw+IDxkYmw+XG4xIHdlaWdodCAgICAgICAgICAgICAgICAwICAgICAgICAgICAgIDEgIDUuMDcgMC43MDEgIDMuNTkgIDQuNTUgIDUuMTUgIDUuNTNcbiAgIHAxMDAgaGlzdCBcbiogPGRibD4gPGNocj5cbjEgIDYuMzEg4paC4paH4paH4paH4paGXG4ifQ== -->
+<pre><code>-- Data Summary ------------------------
+                           Values     
+Name                       PlantGrowth
+Number of rows             30         
+Number of columns          2          
+_______________________               
+Column type frequency:                
+  factor                   1          
+  numeric                  1          
+________________________              
+Group variables            None       
+
+-- Variable type: factor -------------------------------------------------------
+# A tibble: 1 x 6
+  skim_variable n_missing complete_rate ordered n_unique
+* &lt;chr&gt;             &lt;int&gt;         &lt;dbl&gt; &lt;lgl&gt;      &lt;int&gt;
+1 group                 0             1 FALSE          3
+  top_counts               
+* &lt;chr&gt;                    
+1 ctr: 10, trt: 10, trt: 10
+
+-- Variable type: numeric ------------------------------------------------------
+# A tibble: 1 x 11
+  skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75
+* &lt;chr&gt;             &lt;int&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 weight                0             1  5.07 0.701  3.59  4.55  5.15  5.53
+   p100 hist 
+* &lt;dbl&gt; &lt;chr&gt;
+1  6.31 ▂▇▇▇▆</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><strong>create_report</strong></p>
@@ -268,17 +294,42 @@ colnames(): shows the name of each column in the data frame<br />
 View(): shows a spreadsheet-like display of the entire data frame</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbmFtZXMoUGxhbnRHcm93dGgpXG5cbmBgYCJ9 -->
-<pre class="r"><code>colnames(PlantGrowth)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShQbGFudEdyb3d0aClcblxuYGBgIn0= -->
+<pre class="r"><code>summary(PlantGrowth)
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwid2VpZ2h0XCIgXCJncm91cFwiIFxuIn0= -->
-<pre><code>[1] &quot;weight&quot; &quot;group&quot; </code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICB3ZWlnaHQgICAgICAgZ3JvdXAgICBcbiBNaW4uICAgOjMuNTkwICAgY3RybDoxMCAgXG4gMXN0IFF1Ljo0LjU1MCAgIHRydDE6MTAgIFxuIE1lZGlhbiA6NS4xNTUgICB0cnQyOjEwICBcbiBNZWFuICAgOjUuMDczICAgICAgICAgICAgXG4gM3JkIFF1Ljo1LjUzMCAgICAgICAgICAgIFxuIE1heC4gICA6Ni4zMTAgICAgICAgICAgICBcbiJ9 -->
+<pre><code>     weight       group   
+ Min.   :3.590   ctrl:10  
+ 1st Qu.:4.550   trt1:10  
+ Median :5.155   trt2:10  
+ Mean   :5.073            
+ 3rd Qu.:5.530            
+ Max.   :6.310            </code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoUGxhbnRHcm93dGgpXG5uY29sKFBsYW50R3Jvd3RoKVxubnJvdyhQbGFudEdyb3d0aClcblxuUGxhbnRHcm93dGhbXCJ3ZWlnaHRcIl1cblBsYW50R3Jvd3RoJHdlaWdodFxuYGBgIn0= -->
+<pre class="r"><code>names(PlantGrowth)
+ncol(PlantGrowth)
+nrow(PlantGrowth)
+
+PlantGrowth[&quot;weight&quot;]
+PlantGrowth$weight</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-plot-begin eyJjb25kaXRpb25zIjpbXSwiaGVpZ2h0Ijo0MTEuNjE5Mywic2l6ZV9iZWhhdmlvciI6MCwid2lkdGgiOjY2Nn0= -->
+<p><img src="data:image/png;base64,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" /></p>
+<!-- rnb-plot-end -->
 <!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCmBgYHtyfQ0KDQpteWRhdGE8LWhlYWQoUGxhbnRHcm93dGgpDQpzYXBwbHkoUGxhbnRHcm93dGgsIG1lYW4sIG5hLnJtPVRSVUUpDQoNCg0KaGVhZChQbGFudEdyb3d0aCkNCg0KZGltKFBsYW50R3Jvd3RoKQ0KDQpsaWJyYXJ5KGRwbHlyKQ0KZ2xpbXBzZShQbGFudEdyb3d0aCkNCg0Kc3VtbWFyeShQbGFudEdyb3d0aCkNCg0KYGBgDQoNCioqU2tpbToqKiBnb29kIGFkZGl0aW9uIHRvIHRoZSBzdW1tYXJ5IGZ1bmN0aW9uLiBEaXNwbGF5aW5nIA0KLSBtb3N0IHRoZSBudW1lcmljYWwgYXR0cmlidXRlcyBmcm9tIHN1bW1hcnksIA0KLSBpdCBhbHNvIGRpc3BsYXlzIG1pc3NpbmcgdmFsdWVzLA0KLSBtb3JlIHF1YW50aWxlIGluZm9ybWF0aW9uLA0KLSBhbmQgYW4gaW5pbmUgaGlzdG9ncmFtIGZvciBlYWNoIHZhcmlhYmxlLiANCg0KYGBge3J9DQojaW5zdGFsbC5wYWNrYWdlcygic2tpbXIiKQ0KbGlicmFyeShza2ltcikNCnNraW0oUGxhbnRHcm93dGgpDQoNCmBgYA0KDQoNCioqY3JlYXRlX3JlcG9ydCoqIA0KDQpgYGB7cn0NCiNpbnN0YWxsLnBhY2thZ2VzKCJEYXRhRXhwbG9yZXIiKQ0KbGlicmFyeShEYXRhRXhwbG9yZXIpDQoNCkRhdGFFeHBsb3Jlcjo6Y3JlYXRlX3JlcG9ydChQbGFudEdyb3d0aCkNCmBgYA0KDQojIyBFeGFtaW5lIGEgRGF0YSBGcmFtZSBpbiBSIA0KDQpkaW0oKTogc2hvd3MgZGltZW5zaW9ucyBvZiBkYXRhIGZyYW1lcyBieSByb3cgYW5kIGNvbHVtbiAgDQpzdHIoKTogc2hvd3MgdGhlIHN0cnVjdHVyZSBvZiB0aGUgZGF0YSBmcmFtZSAgDQpoZWFkKCk6IHNob3dzIHRoZSBmaXJzdCA2IHJvd3Mgb2YgdGhlIGRhdGEgZnJhbWUgIA0KdGFpbCgpOiBzaG93cyB0aGUgZmlyc3QgNiByb3dzIG9mIHRoZSBkYXRhIGZyYW1lICANCnN1bW1hcnkoKTogcHJvdmlkZXMgc3VtbWFyeSBzdGF0aXN0aWNzIG9uIHRoZSBjb2x1bW5zIG9mIHRoZSBkYXRhIGZyYW1lcyAgDQpjb2xuYW1lcygpOiBzaG93cyB0aGUgbmFtZSBvZiBlYWNoIGNvbHVtbiBpbiB0aGUgZGF0YSBmcmFtZSAgDQpWaWV3KCk6IHNob3dzIGEgc3ByZWFkc2hlZXQtbGlrZSBkaXNwbGF5IG9mIHRoZSBlbnRpcmUgZGF0YSBmcmFtZQ0KDQpgYGB7cn0NCmRpbShQbGFudEdyb3d0aCkNCnN0cihQbGFudEdyb3d0aCkNCmhlYWQoUGxhbnRHcm93dGgpDQp0YWlsKFBsYW50R3Jvd3RoKQ0Kc3VtbWFyeShQbGFudEdyb3d0aCkNCmNvbG5hbWVzKFBsYW50R3Jvd3RoKQ0KVmlldyhQbGFudEdyb3d0aCkNCmBgYA==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpMb2FkIFBhY2thZ2VzDQoNCmBgYHtyfQ0KbGlicmFyeShnZ3Bsb3QyKQ0KbGlicmFyeShyZXNoYXBlMikNCmBgYA0KDQoNCmBgYHtyfQ0KDQpteWRhdGE8LVBsYW50R3Jvd3RoDQpzYXBwbHkoUGxhbnRHcm93dGgsIG1lYW4sIG5hLnJtPVRSVUUpDQoNCg0KaGVhZChQbGFudEdyb3d0aCkNCg0KZGltKFBsYW50R3Jvd3RoKQ0KDQpsaWJyYXJ5KGRwbHlyKQ0KZ2xpbXBzZShQbGFudEdyb3d0aCkNCg0Kc3VtbWFyeShQbGFudEdyb3d0aCkNCg0KYGBgDQoNCioqU2tpbToqKiBnb29kIGFkZGl0aW9uIHRvIHRoZSBzdW1tYXJ5IGZ1bmN0aW9uLiBEaXNwbGF5aW5nIA0KLSBtb3N0IHRoZSBudW1lcmljYWwgYXR0cmlidXRlcyBmcm9tIHN1bW1hcnksIA0KLSBpdCBhbHNvIGRpc3BsYXlzIG1pc3NpbmcgdmFsdWVzLA0KLSBtb3JlIHF1YW50aWxlIGluZm9ybWF0aW9uLA0KLSBhbmQgYW4gaW5pbmUgaGlzdG9ncmFtIGZvciBlYWNoIHZhcmlhYmxlLiANCg0KYGBge3J9DQojaW5zdGFsbC5wYWNrYWdlcygic2tpbXIiKQ0KbGlicmFyeShza2ltcikNCnNraW0oUGxhbnRHcm93dGgpDQoNCmBgYA0KDQoNCioqY3JlYXRlX3JlcG9ydCoqIA0KDQpgYGB7cn0NCiNpbnN0YWxsLnBhY2thZ2VzKCJEYXRhRXhwbG9yZXIiKQ0KbGlicmFyeShEYXRhRXhwbG9yZXIpDQoNCkRhdGFFeHBsb3Jlcjo6Y3JlYXRlX3JlcG9ydChQbGFudEdyb3d0aCkNCmBgYA0KDQojIyBFeGFtaW5lIGEgRGF0YSBGcmFtZSBpbiBSIA0KDQpkaW0oKTogc2hvd3MgZGltZW5zaW9ucyBvZiBkYXRhIGZyYW1lcyBieSByb3cgYW5kIGNvbHVtbiAgDQpzdHIoKTogc2hvd3MgdGhlIHN0cnVjdHVyZSBvZiB0aGUgZGF0YSBmcmFtZSAgDQpoZWFkKCk6IHNob3dzIHRoZSBmaXJzdCA2IHJvd3Mgb2YgdGhlIGRhdGEgZnJhbWUgIA0KdGFpbCgpOiBzaG93cyB0aGUgZmlyc3QgNiByb3dzIG9mIHRoZSBkYXRhIGZyYW1lICANCnN1bW1hcnkoKTogcHJvdmlkZXMgc3VtbWFyeSBzdGF0aXN0aWNzIG9uIHRoZSBjb2x1bW5zIG9mIHRoZSBkYXRhIGZyYW1lcyAgDQpjb2xuYW1lcygpOiBzaG93cyB0aGUgbmFtZSBvZiBlYWNoIGNvbHVtbiBpbiB0aGUgZGF0YSBmcmFtZSAgDQpWaWV3KCk6IHNob3dzIGEgc3ByZWFkc2hlZXQtbGlrZSBkaXNwbGF5IG9mIHRoZSBlbnRpcmUgZGF0YSBmcmFtZQ0KDQpgYGB7cn0NCmRpbShQbGFudEdyb3d0aCkNCnN0cihQbGFudEdyb3d0aCkNCmhlYWQoUGxhbnRHcm93dGgpDQp0YWlsKFBsYW50R3Jvd3RoKQ0Kc3VtbWFyeShQbGFudEdyb3d0aCkNCmNvbG5hbWVzKFBsYW50R3Jvd3RoKQ0KVmlldyhQbGFudEdyb3d0aCkNCmBgYA0KDQpgYGB7cn0NCm5hbWVzKFBsYW50R3Jvd3RoKQ0KbmNvbChQbGFudEdyb3d0aCkNCm5yb3coUGxhbnRHcm93dGgpDQoNClBsYW50R3Jvd3RoWyJ3ZWlnaHQiXQ0KUGxhbnRHcm93dGgkd2VpZ2h0DQpgYGANCg0KDQpgYGB7cn0NCmRmX21lbHQgPC0gbWVsdChteWRhdGEsIGlkLnZhcnM9IndlaWdodCIsIHZhcmlhYmxlLm5hbWU9InNlcmllcyIpDQpkZl9tZWx0DQpnZ3Bsb3QoZGZfbWVsdCwgYWVzKHdlaWdodCwgdmFsdWUpKSArDQogICAgZ2VvbV9saW5lKGFlcyhjb2xvdXI9c2VyaWVzKSkNCmBgYA==</div>
 
 
 

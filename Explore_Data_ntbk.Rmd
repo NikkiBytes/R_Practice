@@ -3,10 +3,17 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+Load Packages
+
+```{r}
+library(ggplot2)
+library(reshape2)
+```
+
 
 ```{r}
 
-mydata<-head(PlantGrowth)
+mydata<-PlantGrowth
 sapply(PlantGrowth, mean, na.rm=TRUE)
 
 
@@ -62,4 +69,21 @@ tail(PlantGrowth)
 summary(PlantGrowth)
 colnames(PlantGrowth)
 View(PlantGrowth)
+```
+
+```{r}
+names(PlantGrowth)
+ncol(PlantGrowth)
+nrow(PlantGrowth)
+
+PlantGrowth["weight"]
+PlantGrowth$weight
+```
+
+
+```{r}
+df_melt <- melt(mydata, id.vars="weight", variable.name="series")
+df_melt
+ggplot(df_melt, aes(weight, value)) +
+    geom_line(aes(colour=series))
 ```
